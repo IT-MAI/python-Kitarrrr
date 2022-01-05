@@ -1,0 +1,285 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "69fa7fca",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4\n",
+      "6\n",
+      "6 4\n"
+     ]
+    }
+   ],
+   "source": [
+    "a=int(input())\n",
+    "b=int(input())\n",
+    "a,b=b,a\n",
+    "print(a,b)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "88b55a58",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a=int(input())\n",
+    "d=1\n",
+    "while a%10>0:\n",
+    "    d=d*(a%10)\n",
+    "    a=a//10\n",
+    "print(d)\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "d2f57841",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4\n",
+      "3\n",
+      "43\n"
+     ]
+    }
+   ],
+   "source": [
+    "a=str(input())\n",
+    "b=str(input())\n",
+    "a=int(a+b)\n",
+    "print(a)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b8fc515d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a=str(input())\n",
+    "print(a.replace(a[1],\"0\",1))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "404e7327",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a=int(input())\n",
+    "a=int(str(a)[::-1])\n",
+    "print(a)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "edbd9a6d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def srsum(array):\n",
+    "    Summ=0\n",
+    "    for i in range(0,len(array)):\n",
+    "        Summ=Summ+array[i]\n",
+    "    srsum=Summ/len(array)\n",
+    "    return srsum\n",
+    "array=[]\n",
+    "while True:\n",
+    "    word=input()\n",
+    "    if word != \"end\":\n",
+    "        array.append(float(word))\n",
+    "    else:\n",
+    "        break\n",
+    "print(srsum(array))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "71d379fc",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a=input().split()\n",
+    "print(a)\n",
+    "k=input()\n",
+    "count=a.count(k)\n",
+    "while count>0:\n",
+    "    a.remove(k)\n",
+    "    count-=1\n",
+    "print(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ce871f7b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from math import sqrt\n",
+    "def is_prime(num):\n",
+    "    if num%2==0 and num!=2:\n",
+    "        return False\n",
+    "    if num==0 or num==1:\n",
+    "        return False\n",
+    "    for n3 in range(3, int(sqrt(num).real) + 1, 2):\n",
+    "        if num%n3==0:\n",
+    "            return False\n",
+    "    return True\n",
+    "print(\"Введите число от 0 до 1000\")\n",
+    "n3=int(input())\n",
+    "print(is_prime(n3))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4c8c567d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = int(input())\n",
+    "if a == 0:\n",
+    "    print(0)\n",
+    "else:\n",
+    "    fib_p, fib_n = 0, 1\n",
+    "    n = 1\n",
+    "    while fib_n <= a:\n",
+    "        if fib_n == a:\n",
+    "            print(n)\n",
+    "            break\n",
+    "        fib_p, fib_n = fib_n, fib_p + fib_n\n",
+    "        n += 1\n",
+    "    else:\n",
+    "        print(-1)\n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "aa3b162b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy\n",
+    "print(\"Введите элементы массива через пробел\")\n",
+    "a = [float(i) for i in input().split()]\n",
+    "print(\"Среднее арифметическое данного массива равно\",numpy.mean(a))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "189d1718",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "list1 = [ int(s) for s in input().split() ]\n",
+    "print(list1)\n",
+    "list1.remove(max(list1))\n",
+    "print(\"2 максимум:\",max(list1))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6cb25725",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = [int(s) for s in input().split()]\n",
+    "res=0\n",
+    "for i in range(len(a)):\n",
+    "    for j in range(i+1, len(a)):\n",
+    "        if a[i]==a[j]:\n",
+    "            res+=1\n",
+    "print(res)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ab07e138",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "list1 = [ int(s) for s in input().split() ]\n",
+    "for i in range(0,len(list1)):\n",
+    "    if list1.count(list1[i])==1:\n",
+    "        print(list1[i])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "57f68a28",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"Введите список чисел\")\n",
+    "g=[int(s) for s in input().split()]\n",
+    "print(\"Введите индекс одного из элементов (не последнего) и число, которое хотите добавить в список через пробел\")\n",
+    "k, C = [int(s) for s in input().split()]\n",
+    "g.append(0)\n",
+    "for i in range(len(g)-1, k, -1):\n",
+    "    g[i]=g[i - 1]\n",
+    "g[k]=C\n",
+    "print(\"Список после преобразования:\")\n",
+    "print(' '.join([str(i) for i in g]))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7d8bb0c9",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a=[int(s) for s in input().split()]\n",
+    "num=int(input())\n",
+    "for i in range(num+1, len(a)):\n",
+    "    a[i-1]=a[i]\n",
+    "a.pop()\n",
+    "print(a)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
